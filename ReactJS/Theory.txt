@@ -1,0 +1,55 @@
+[a, setA] = useState(): đối số là giá trị ban đầu của a , setA là 1 hàm gán lại cho a và load lại component
+
+1. useEffect(callback)
+    - Gọi callback mỗi khi component re-render
+    - Gọi callback sau khi component thêm element vào DOM
+2. useEffect(callback, [])
+    - Chỉ gọi callback 1 lần sau khi component mounted
+3. useEffect(callback, [deps])
+    - Callback sẽ được gọi lại mỗi khi deps thay đổi
+-----------
+1. Callback luôn được gọi sau khi component mouted
+2. Cleanup function luôn được gọi trước khi component unmouted
+3. Cleanup function luôn được gọi trước khi callback được gọi ( trừ lần component được mouted )
+
+useLayoutEffect giống useEffect nhưng render giao diện là bước cuối cùng
+useRef có 1 thuộc tính là current , trong DOM có prop ref , function component không có ref
+
+memo(component) : (HOC - higher order component)
+    - Nếu 1 prop của component bị thay đổi thì sẽ load lại component
+    - Nhưng nếu component chỉ thay đổi địa chỉ vùng nhớ thì memo không nhận ra được
+
+useMemo(callback, dependency): dependency thay đổi thì logic trong callback được xử lý
+useCallback(function, dependency): function thay đổi khi dependency thay đổi
+
+[state, dispatch] = useReducer(reducer, initState)
+- initState: giá trị ban đầu của state
+- dispatch: gửi đi action
+- reducer: nhận 2 tham số state, action và trả về state mới
+
+useContext() và createContext()
+- createContext: Tạo ra bối cảnh 
+- Provider: cung cấp value cho các children
+- Consumer(useContext()): sử dụng value đấy để xử lý logic
+
+forwardRef: public thuộc tính ref ra function component
+useImperativeHandle: private lại các thuộc tính (cho phép lấy thuộc tính nào thì mới được lấy thuộc tính đó)
+
+css module (đuôi .module.css): 
+- Các css trong module sẽ được gán key và gọi ra theo 1 đối tượng 
+- Các tagName style trong module thì vẫn tính là global
+
+style component
+
+npm i clsx 
+clsx: giúp style nhiều class và style theo điều kiện 
+
+npm i sass
+sass: thư viện của css giúp code dễ hiểu hơn và k bị trùng lặp class
+
+React Route V6: 
+- BrowserRoute: component phạm vi muốn route 
+- Routes: chứa các Route con
+- Route: 
+    + path: đối chiếu tuyến đường
+    + element: render ra react component tương ứng path
