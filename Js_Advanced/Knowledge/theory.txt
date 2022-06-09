@@ -1,1 +1,27 @@
-IIFE: hàm thực thi ngay
+IIFE: Hàm thực thi ngay, nên ngăn cách giữa các thành phần khác bằng dấu chấm phẩy
+
+Scope: Phạm vi cục bộ, Phạm vi trong hàm, Phạm vi trong khối
+
+Hoisting: 
+	+ Quét tất cả các phép khai báo, kể cả khai báo sau khi gọi, vậy nên các khối lệnh ưu tiên phép khai báo gần nhất
+	+ Giữa biến tham số và biến bên trong khối lệnh thì Hoisting ưu tiên bên trong khối lệnh
+
+Strict mode: Sử dụng use strict ở đầu file để báo lỗi ở console
+
+Primitive types: Kiểu gán biến thông thường (nguyên thủy) gán giá trị cho biến và cung cấp 1 ô nhớ khác
+Reference types: Kiểu gán tham chiếu là trỏ tới cùng 1 vùng nhớ
+
+This: Không có trong arrow function, this gọi bên ngoài sẽ tham chiếu đến global -> window nhưng nếu trong strict mode nó sẽ báo lỗi, this trong một hàm lồng một hàm thì cũng trỏ đến global
+Truyền tham số vào 3 từ khóa dưới đây thì sẽ được ưu tiên nhận
+Bind(): Khai báo this thuộc đối tượng nào (không thực thi)
+Call(): Khai báo this thuộc đối tượng nào và thực thi
+Apply(): Khai báo this thuộc đối tượng nào và thực thi (các tham số tiếp theo viết trong mảng)
+
+Var được khai báo là global, Let không được truy cập bên ngoài phạm vi của biến
+
+Closure: là một hàm có thể ghi nhớ nơi nó được tạo và truy cập được biến ở bên ngoài phạm vi của nó, có 3 phạm vi: 
+	+ Có thể truy cập được ở nơi biến đấy được khai báo
+	+ Có thể truy cập biến của hàm bên ngoài
+	+ Có thể truy cập biến toàn cục
+
+
