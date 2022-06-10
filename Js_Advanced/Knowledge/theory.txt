@@ -24,4 +24,6 @@ Closure: là một hàm có thể ghi nhớ nơi nó được tạo và truy c�
 	+ Có thể truy cập biến của hàm bên ngoài
 	+ Có thể truy cập biến toàn cục
 
+rest: dải dấu ... trước một tham số thường kết hợp với destructoring
+spread: dải dấu ... trước một đối số, một Array hoặc một Object để lấy ra giá trị hoặc để hợp nhất hoặc overide lại
 
